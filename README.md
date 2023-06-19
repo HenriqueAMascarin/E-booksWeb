@@ -1,40 +1,52 @@
-# e-foodProject
+# MediaTimer
 
-This template should help get you started developing with Vue 3 in Vite.
+ Site que visa a pesquisa de livros e salvar como favorito.
 
-## Recommended IDE Setup
+## Conteúdos
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Sobre](#Sobre)
+  - [Screenshot](#screenshot)
+  - [O que aprendi?](#O-que-aprendi?)
+  - [O que busco no futuro?](#O-que-busco-no-futuro?)
+  - [O que falta no projeto?](#O-que-falta-no-projeto?)
+  - [Demonstração](#demonstração)
+  - [Links](#links)
+  - [Tecnologias usadas](#Tecnologias-usadas)
+  - [Futuras tecnologias](#Futuras-tecnologias)
 
-## Type Support for `.vue` Imports in TS
+## Sobre
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### Screenshot
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+![](./src/assets/images/screenshot.jpg)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### O que aprendi?
 
-## Customize configuration
+ ( Área que irei escrever quando terminar o projeto )
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### O que busco no futuro?
 
-## Project Setup
+  ( Área que irei escrever quando terminar o projeto )
 
-```sh
-npm install
-```
+### O que falta no projeto?
 
-### Compile and Hot-Reload for Development
+- Funcionalidade de busca de livros (API)
+- Página de favoritos com localstorage
 
-```sh
-npm run dev
-```
+### Links
 
-### Type-Check, Compile and Minify for Production
+- Site: [clique aqui](e-books-web.vercel.app).
 
-```sh
-npm run build
-```
+- Design no Figma: [clique aqui](https://www.figma.com/file/GrGuOJvXLsZbMAGJY7DkIS/e-books?type=design&node-id=17%3A57&t=DfOwYh2vKz9SXIGF-1).
+
+- Portfólio: [clique aqui](https://henriqueamascarin.vercel.app).
+
+### Tecnologias usadas
+
+- Vue
+- Tailwind
+- Typescript
+
+### Futuras tecnologias
+
+- Pinia
