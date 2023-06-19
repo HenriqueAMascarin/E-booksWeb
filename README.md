@@ -47,7 +47,7 @@
 
 ### Links
 
-- Site: [clique aqui](e-books-web.vercel.app).
+- Site: [clique aqui](https://e-books-web.vercel.app).
 
 - Design no Figma: [clique aqui](https://www.figma.com/file/GrGuOJvXLsZbMAGJY7DkIS/e-books?type=design&node-id=17%3A57&t=DfOwYh2vKz9SXIGF-1).
 
