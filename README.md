@@ -6,6 +6,7 @@
 
 - [Sobre](#Sobre)
   - [Screenshot](#screenshot)
+  - [Como executar](#Como-executar)
   - [O que aprendi?](#O-que-aprendi?)
   - [O que busco no futuro?](#O-que-busco-no-futuro?)
   - [O que falta no projeto?](#O-que-falta-no-projeto?)
@@ -19,6 +20,17 @@
 ### Screenshot
 
 ![](./src/assets/images/screenshot.jpg)
+
+### Como executar 
+
+1 - Baixe o projeto pelo botão code em verde no repositório do projeto, assim selecionando o formato que queira exemplo zip.
+2 - Abra com o Vscode ou qualquer outro.
+3 - Coloque os seguintes comandos no console:
+
+- npm install
+- npm run dev
+
+🚨 Install é para instalar as dependências e o Run Dev é para abrir um servidor para ver o projeto na web.
 
 ### O que aprendi?
 
