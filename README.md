@@ -23,7 +23,7 @@
 
 - 1: Baixe o projeto pelo botão code em verde no repositório do projeto, assim selecionando o formato que queira exemplo zip.
 - 2: Abra com o Vscode ou qualquer outro.
-- 3: Coloque os seguintes comandos no console:
+- 3: Coloque os seguintes comandos no terminal:
 
 - npm install
 - npm run dev
