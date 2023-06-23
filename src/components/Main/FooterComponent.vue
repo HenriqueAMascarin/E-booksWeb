@@ -6,11 +6,11 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <footer class="mt-auto bg-brownCustom flex-grow">
+    <footer class="mt-auto bg-brownCustom">
         <MarginContainer>
             <div class="flex flex-col md:flex-row items-center gap-5 mt-5 mb-3">
-                <RouterLink to="/">
-                    <svg class="h-logosFooter w-auto drop-shadow-borderCustom" width="187" height="155" viewBox="0 0 187 155" fill="none"
+                <RouterLink to="/" aria-label="Button go to home">
+                    <svg class="max-h-logosFooter w-auto drop-shadow-borderCustom" width="187" height="155" viewBox="0 0 187 155" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_17_99)">
                             <path
@@ -28,8 +28,8 @@ import { RouterLink } from 'vue-router';
                     </svg>
                 </RouterLink>
 
-                <a href="https://henriqueamascarin.vercel.app" class="md:ml-auto" target="_blank">
-                    <img class="h-logosFooter w-auto rounded-lg" src="../../assets//images//HenriquePhoto.webp"
+                <a aria-label="Button go to Henrique portfolio" href="https://henriqueamascarin.vercel.app" class="md:ml-auto" target="_blank">
+                    <img class="max-h-logosFooter w-auto rounded-lg" src="../../assets//images//HenriquePhoto.webp"
                     alt="HenriquePhoto"
                     width="194" height="185">
                 </a>

@@ -24,14 +24,17 @@ module.exports = {
         , "0.8px 0px 0px rgba(255,255,255, 1)"
         ,"0 0 3px rgba(0,0,0, 1)"],
       },
+      maxHeight:{
+        'logosHeader': "60px",
+        'logosFooter': "100px",
+      },
       maxWidth:{
         'paraghPrincipal': "250px",
         'cardsCustom': "280px",
       },
       height:{
         'cardsCustom': "550px",
-        'logosHeader': "60px",
-        'logosFooter': "100px",
+        'headerHeight': "72px",
       },
       colors: {
         'brownCustom': "#59433E",

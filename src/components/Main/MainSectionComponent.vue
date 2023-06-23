@@ -13,7 +13,7 @@ function dontFoundBook() {
     const errorMessageComponent = document.getElementById("errorMessage");
     if (errorMessageComponent) {
         errorMessageComponent.textContent = "Missing book!";
-        errorMessageComponent.classList.add('opacity-100');
+        errorMessageComponent.classList.remove('hidden');
     }
 }
 
@@ -29,10 +29,10 @@ function searchBooks(valuesText: typeof valuesInput) {
 
     if (bookName == '' && author == '' && errorMessageComponent) {
         errorMessageComponent.textContent = "Missing book name and author name!";
-        errorMessageComponent.classList.add('opacity-100');
+        errorMessageComponent.classList.remove('hidden');
         return;
     }
-    errorMessageComponent?.classList.remove('opacity-100');
+    errorMessageComponent?.classList.add('hidden');
 
     (function findUrl() {
         // "+intitle:" is for title names correctly and "+inauthor:" is for author. if he not pass +intitle: (like q=flowers) they gonna search in all texts of book info of that value.
@@ -62,7 +62,7 @@ function searchBooks(valuesText: typeof valuesInput) {
 </script>
 
 <template>
-    <section class="text-center pb-32">
+    <section class="text-center pb-32  flex-grow">
         <div class="bg-[url('../assets/images/books.webp')] bg-cover h-60 bg-center border-b-4 border-brownCustom"
         aria-label="Books image"
         role="img"></div>
@@ -88,7 +88,7 @@ function searchBooks(valuesText: typeof valuesInput) {
                             class="h-9 rounded-xl placeholder-stone-500 font-bold pl-2"
                             v-model="valuesInput.authorNameField">
 
-                        <p class="font-bold text-red-800 self-start absolute -bottom-2 drop-shadow-borderCustom opacity-0 transition-all"
+                        <p class="font-bold text-red-800 self-start absolute -bottom-2 drop-shadow-borderCustom hidden"
                             id="errorMessage">Missing book name and author name!</p>
                     </div>
 

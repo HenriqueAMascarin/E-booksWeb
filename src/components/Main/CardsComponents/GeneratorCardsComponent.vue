@@ -29,22 +29,23 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
 </script>   
 
 <template>
-    <div class="flex max-md:flex-col md:flex-wrap items-center justify-center gap-20">
+    <div class="grid gap-20 grid-cols-1 md:grid-cols-2 justify-items-center items-center">
 
         <article v-for="dataCard in props.dataItems.items"
             class="flex flex-col max-w-cardsCustom h-cardsCustom text-left bg-white p-3 rounded-xl shadow-shadowCustom overflow-auto">
 
             <div v-if="dataCard.volumeInfo.imageLinks" class="rounded-xl bg-cover min-h-[290px] bg-top mb-1 relative"
-                :style="{ 'backgroundImage' : 'url(' + dataCard.volumeInfo?.imageLinks.thumbnail + ')' }"
+                :style="{ 'backgroundImage': 'url(' + dataCard.volumeInfo?.imageLinks.thumbnail + ')' }"
                 :aria-label="dataCard.volumeInfo.title + 'image'" role="img">
 
                 <button @click="dataStore.changeZoomValue({
                     img: dataCard.volumeInfo.imageLinks.thumbnail,
                     title: dataCard.volumeInfo.title ? dataCard.volumeInfo.title : 'Book with no title'
-                })">
+                })" 
+                class="drop-shadow-borderShadowCustom absolute right-2 top-2" 
+                aria-label="Button that zoom the image">
 
-                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="drop-shadow-borderShadowCustom absolute right-2 top-2">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M2.15 38.05L0 35.9L7.35 28.55H1V25.55H12.5V37.05H9.5V30.7L2.15 38.05ZM35.85 38.05L28.5 30.7V37.05H25.5V25.55H37V28.55H30.65L38 35.9L35.85 38.05ZM1 12.55V9.55H7.35L0 2.2L2.15 0.05L9.5 7.4V1.05H12.5V12.55H1ZM25.5 12.55V1.05H28.5V7.4L35.9 0L38.05 2.15L30.65 9.55H37V12.55H25.5Z"
                             fill="#26111F" />
@@ -85,14 +86,14 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
             </p>
 
             <div class="flex items-end mt-auto flex-wrap">
-                <button class="rounded-md text-white px-2 pt-0.5 font-bold text-[17px]" 
-                :style="{ 'backgroundColor' : favoriteStore.favoriteData.items.includes(dataCard) ? '#FFC700' : '#26111F' }"
+                <button class="rounded-md text-white px-2 pt-0.5 font-bold text-[17px]"
+                    :style="{ 'backgroundColor': favoriteStore.favoriteData.items.includes(dataCard) ? '#FFC700' : '#26111F' }"
                     @click="() => addFavorite(dataCard)">
                     {{ favoriteStore.favoriteData.items.includes(dataCard) ? "Unfavorite" : "Favorite" }}
                 </button>
 
                 <a v-if="dataCard.volumeInfo.infoLink" :href="dataCard.volumeInfo.infoLink" target="_blank"
-                    rel="noopener noreferrer" class="ml-auto">
+                    rel="noopener noreferrer" class="ml-auto" aria-label="Button Buy the book">
                     <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_39)">
                             <path

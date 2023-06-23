@@ -5,6 +5,9 @@ import { watchEffect } from 'vue';
 
 const dataStore = useDataStore();
 
+const htmlElement = document.querySelector('html');
+const bodyElement = document.querySelector('body');
+
 function closeZoom(data: typeof dataStore) {
     data.changeZoomValue({ img: null, title: 'Book with no title' })
 }
@@ -12,9 +15,11 @@ function closeZoom(data: typeof dataStore) {
 watchEffect(() => {
     
     if (dataStore.zoomData.img) {
-        document.querySelector('body')?.classList.add('overflow-hidden');
+        htmlElement?.classList.add('overflow-hidden');
+        bodyElement?.classList.add('overflow-hidden');
     } else {
-        document.querySelector('body')?.classList.remove('overflow-hidden');
+        htmlElement?.classList.remove('overflow-hidden');
+        bodyElement?.classList.remove('overflow-hidden');
     }
     
 });
