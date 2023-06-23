@@ -2,7 +2,7 @@
 
 import { useFavoriteStore } from '@/stores/FavoriteStore';
 import { useDataStore, type DataType } from '@/stores/DataStore';
-import { stringFavoriteInternal } from '@/stores/FavoriteStore';
+
 
 const dataStore = useDataStore();
 const favoriteStore = useFavoriteStore();
@@ -12,9 +12,9 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
 
     let favoriteItemsArray = favoriteStore.favoriteData.items;
 
-    if (favoriteItemsArray.includes(item)) {
+    if (favoriteStore.favoriteIds.includes(item.id)) {
         favoriteItemsArray = favoriteItemsArray.filter((itemsArray) => {
-            return itemsArray != item;
+            return itemsArray.id != item.id;
         })
     } else {
         favoriteItemsArray = [...favoriteItemsArray, item];
@@ -23,14 +23,13 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
     const newFavorite: DataType = { items: favoriteItemsArray, totalItems: favoriteItemsArray.length };
 
     favoriteStore.changeFavoriteValue(newFavorite);
-    localStorage.setItem(stringFavoriteInternal, JSON.stringify(newFavorite));
 }
 
 </script>   
 
 <template>
     <div class="grid gap-20 grid-cols-1 md:grid-cols-2 justify-items-center items-center">
-
+        
         <article v-for="dataCard in props.dataItems.items"
             class="flex flex-col max-w-cardsCustom h-cardsCustom text-left bg-white p-3 rounded-xl shadow-shadowCustom overflow-auto">
 
@@ -87,9 +86,9 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
 
             <div class="flex items-end mt-auto flex-wrap">
                 <button class="rounded-md text-white px-2 pt-0.5 font-bold text-[17px]"
-                    :style="{ 'backgroundColor': favoriteStore.favoriteData.items.includes(dataCard) ? '#FFC700' : '#26111F' }"
+                    :style="{ 'backgroundColor': favoriteStore.favoriteIds.includes(dataCard.id) ? '#FFC700' : '#26111F' }"
                     @click="() => addFavorite(dataCard)">
-                    {{ favoriteStore.favoriteData.items.includes(dataCard) ? "Unfavorite" : "Favorite" }}
+                    {{ favoriteStore.favoriteIds.includes(dataCard.id) ? "Unfavorite" : "Favorite" }}
                 </button>
 
                 <a v-if="dataCard.volumeInfo.infoLink" :href="dataCard.volumeInfo.infoLink" target="_blank"
