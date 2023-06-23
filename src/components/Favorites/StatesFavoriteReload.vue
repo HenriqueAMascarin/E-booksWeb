@@ -9,11 +9,14 @@ const favoriteInternalStorage = localStorage.getItem(stringFavoriteInternal);
 if (favoriteInternalStorage) {
     const jsonFavorite: typeof favoriteStore.favoriteData = JSON.parse(favoriteInternalStorage);
     favoriteStore.changeFavoriteValue(jsonFavorite);
+
 } else {
     localStorage.setItem(stringFavoriteInternal, JSON.stringify(favoriteStore.favoriteData));
+    
 }
 
 watchEffect(() => {
+
     const newIdArray: typeof favoriteStore.favoriteIds = []
 
     favoriteStore.favoriteData.items.map(({ id }) => {
@@ -22,6 +25,7 @@ watchEffect(() => {
 
     favoriteStore.changeFavoriteIds(newIdArray);
     localStorage.setItem(stringFavoriteInternal, JSON.stringify(favoriteStore.favoriteData));
+
 });
 
 </script>
