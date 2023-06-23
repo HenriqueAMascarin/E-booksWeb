@@ -1,13 +1,16 @@
 <script setup lang="ts">
+
 import MarginContainer from './MarginContainer.vue';
+import { RouterLink } from 'vue-router';
+
 </script>
 
 <template>
     <footer class="mt-auto bg-brownCustom flex-grow">
         <MarginContainer>
             <div class="flex flex-col md:flex-row items-center gap-5 mt-5 mb-3">
-                <a href="#">
-                    <svg class="max-h-logosFooter w-auto drop-shadow-logoCustom" width="187" height="155" viewBox="0 0 187 155" fill="none"
+                <RouterLink to="/">
+                    <svg class="h-logosFooter w-auto drop-shadow-borderCustom" width="187" height="155" viewBox="0 0 187 155" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_17_99)">
                             <path
@@ -23,11 +26,12 @@ import MarginContainer from './MarginContainer.vue';
                             </clipPath>
                         </defs>
                     </svg>
-                </a>
+                </RouterLink>
 
-                <a href="#" class="md:ml-auto">
-                    <img class="max-h-logosFooter w-auto rounded-lg" src="../assets/images/HenriquePhoto.webp"
-                        alt="HenriquePhoto">
+                <a href="https://henriqueamascarin.vercel.app" class="md:ml-auto" target="_blank">
+                    <img class="h-logosFooter w-auto rounded-lg" src="../../assets//images//HenriquePhoto.webp"
+                    alt="HenriquePhoto"
+                    width="194" height="185">
                 </a>
             </div>
         </MarginContainer>
