@@ -31,7 +31,7 @@ function addFavorite(item: typeof props.dataItems.items[0]) {
     <div class="grid gap-20 grid-cols-1 md:grid-cols-2 justify-items-center items-center">
         
         <article v-for="dataCard in props.dataItems.items"
-            class="flex flex-col max-w-cardsCustom h-cardsCustom text-left bg-white p-3 rounded-xl shadow-shadowCustom overflow-auto">
+            class="flex flex-col w-cardsCustom max-w-full h-cardsCustom text-left bg-white p-3 rounded-xl shadow-shadowCustom overflow-auto">
 
             <div v-if="dataCard.volumeInfo.imageLinks" class="rounded-xl bg-cover min-h-[290px] bg-top mb-1 relative"
                 :style="{ 'backgroundImage': 'url(' + dataCard.volumeInfo?.imageLinks.thumbnail + ')' }"

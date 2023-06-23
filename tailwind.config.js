@@ -28,9 +28,11 @@ module.exports = {
         'logosHeader': "60px",
         'logosFooter': "100px",
       },
+      width:{
+        'cardsCustom': "280px",
+      },
       maxWidth:{
         'paraghPrincipal': "250px",
-        'cardsCustom': "280px",
       },
       height:{
         'cardsCustom': "550px",
