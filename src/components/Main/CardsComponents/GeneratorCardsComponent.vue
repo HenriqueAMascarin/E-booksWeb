@@ -3,7 +3,6 @@
 import { useFavoriteStore } from '@/stores/FavoriteStore';
 import { useDataStore, type DataType } from '@/stores/DataStore';
 
-
 const dataStore = useDataStore();
 const favoriteStore = useFavoriteStore();
 const props = defineProps<{ dataItems: typeof dataStore.data }>();
