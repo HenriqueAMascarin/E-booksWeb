@@ -6,6 +6,7 @@
 
 - [Sobre](#Sobre)
   - [Screenshot](#screenshot)
+  - [O que Faz](#o-que-faz)
   - [Como executar](#Como-executar)
   - [O que aprendi?](#O-que-aprendi?)
   - [O que busco no futuro?](#O-que-busco-no-futuro?)
@@ -18,6 +19,13 @@
 ### Screenshot
 
 ![](./src/assets/images/screenshot.jpg)
+
+### O que faz? 
+
+- Buscar por livros
+- Favorita livros
+- Dar zoom nas imagens dos livros
+- Dados salvos no navegador (localStorage)
 
 ### Como executar 
 
@@ -51,7 +59,7 @@
 - Responsividade
 - Vite
 - Aria Acessibility
-- Vue
+- Vue.js
 - Vue Router
 - Pinia
 - Tailwind
